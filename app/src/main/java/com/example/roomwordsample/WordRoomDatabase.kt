@@ -27,10 +27,9 @@ abstract class WordRoomDatabase : RoomDatabase() {
                     wordDao.deleteAll()
 
                     // Add sample words.
-                    var word = Word("Hello")
+                    var word = Word(word= "Hello")
                     wordDao.insert(word)
-                    word = Word("World!")
-                    wordDao.insert(word)
+
                 }
             }
         }
