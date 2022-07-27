@@ -28,9 +28,9 @@ class MainActivity : AppCompatActivity() {
         recyclerView.adapter = adapter
         recyclerView.layoutManager = LinearLayoutManager(this)
 
-        wordViewModel.allWords.observe(this, Observer { words ->
+        wordViewModel.allWords.observe(this) { words ->
             words?.let { adapter.submitList(it) }
-        })
+        }
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
